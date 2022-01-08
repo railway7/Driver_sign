@@ -1,5 +1,7 @@
 # 作者仓库:https://github.com/spiritLHL/Gecko_sign
 # 觉得不错麻烦点个star谢谢
+# 注册页面 http://www.sojiang.com/i.aspx?c=1-11501664
+# 只适配Windows，不适配Linux，Linux环境下无法加载插件
 
 users = ["xxxxxxxxx", "xxxxxxxxxxx"]
 passwords = ["xxxxxx", "xxxxxxxx"]
@@ -26,7 +28,7 @@ def input_dependence():
     # opt.add_extension(path_e)
     path_e = os.getcwd() + r"\AutoVerify.crx"
     opt.add_extension(path_e)
-    opt.add_argument("window-size=1920,1080")
+    # opt.add_argument("window-size=1920,1080")
     # opt.add_experimental_option('prefs', prefs)  # 关掉浏览器左上角的通知提示
     # opt.add_argument("disable-infobars")  # 关闭'chrome正受到自动测试软件的控制'提示
     opt.add_argument('--no-sandbox')
