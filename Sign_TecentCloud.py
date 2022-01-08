@@ -1,5 +1,7 @@
 # 作者仓库:https://github.com/spiritLHL/Gecko_sign
 # 觉得不错麻烦点个star谢谢
+# 活动页面 https://cloud.tencent.com/act/integralmall
+# 适配Linux和Windows
 
 
 
@@ -8,29 +10,18 @@ users = ["xxxxxx@163.com", "xxxxxxxx@qq.com"]
 passwords = ["xxxxxxxxxxxx", "xxxxxxx"]
 
 
-
-import requests
 import random
-import re
 import time
-import json
-from lxml import html
-from bs4 import BeautifulSoup
 from selenium.webdriver import Firefox, FirefoxOptions
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.common.exceptions import TimeoutException
-from requests.adapters import HTTPAdapter
 
 
 def input_dependence():
-    global driver, s
-    # 设置超时重试
-    s = requests.Session()
-    s.mount('http://', HTTPAdapter(max_retries=3))
-    s.mount('https://', HTTPAdapter(max_retries=3))
+    global driver
     # 启动浏览器内核
     opt = FirefoxOptions()
     opt.headless = True
