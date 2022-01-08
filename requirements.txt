@@ -1,2 +1,3 @@
 selenium==4.1.0
 pyshadow==0.0.4
+pyvirtualdisplay==2.2
