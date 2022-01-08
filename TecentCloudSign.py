@@ -5,7 +5,6 @@ cron: 8 8 * * *
 new Env('领取腾讯云签到积分');
 '''
 
-
 import requests
 import random
 import re
@@ -22,8 +21,9 @@ from selenium.common.exceptions import TimeoutException
 from requests.adapters import HTTPAdapter
 
 
-usrs = os.environ["Gecko_tecent_users"].split("&")
+users = os.environ["Gecko_tecent_users"].split("&")
 passwords = os.environ["Gecko_tecent_passwords"].split("&")
+
 
 
 def input_dependence():
