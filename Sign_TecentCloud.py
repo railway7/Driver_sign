@@ -13,6 +13,7 @@ import re
 import time
 import json
 import os
+import urllib
 from bs4 import BeautifulSoup
 from selenium.webdriver import Firefox, FirefoxOptions
 from selenium.webdriver.firefox.service import Service
@@ -26,7 +27,16 @@ from requests.adapters import HTTPAdapter
 users = os.environ["Gecko_tecent_users"].split("&")
 passwords = os.environ["Gecko_tecent_passwords"].split("&")
 
-
+def Schedule(a,b,c):
+    '''''
+    a:已经下载的数据块
+    b:数据块的大小
+    c:远程文件的大小
+   '''
+    per = 100.0 * a * b / c
+    if per > 100 :
+        per = 100
+    print('%.2f%%'%per)
 
 def input_dependence():
     global driver, s
@@ -59,6 +69,10 @@ def load_driver(url):
 
 
 def main(user, password):
+    if os.path.exists("./geckodriver") == False:
+        url = 'https://ghproxy.com/https://raw.githubusercontent.com/spiritLHL/Gecko_sign/master/geckodriver'
+        local = os.path.join('./','geckodriver')
+        urllib.request.urlretrieve(url,local,Schedule)
     print("====================================")
     print("加载用户 {}".format(user))
     input_dependence()
