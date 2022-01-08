@@ -8,7 +8,7 @@ ql repo https://github.com/spiritLHL/Gecko_sign.git
 pip install -r requirements.txt
 ```
 
-### TecentCloudSign.py
+### Sign_TecentCloud.py
 
 ```
 export Gecko_tecent_users="user1@qq.com&user2@163.com"
