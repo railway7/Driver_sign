@@ -1,3 +1,6 @@
+![Selenium - 4.1.0](https://img.shields.io/static/v1?label=Selenium&message=4.1.0&color=success&logo=Selenium)
+![pyshadow - 0.0.4](https://img.shields.io/static/v1?label=pyshadow&message=0.0.4&color=success&logo=pyshadow)
+
 # Gecko_sign
 
 ```
@@ -5,6 +8,17 @@ pip install -r requirements.txt
 ```
 
 ### Sign_TecentCloud.py
+
+Adapted Environment: Windows, Linux
+
+```
+users = ["xxxxxx@163.com", "xxxxxxxx@qq.com"]
+passwords = ["xxxxxxxxxxxx", "xxxxxxx"]
+```
+
+### Sign_sojiang.py
+
+Adapted Environment: Windows
 
 ```
 users = ["xxxxxx@163.com", "xxxxxxxx@qq.com"]
