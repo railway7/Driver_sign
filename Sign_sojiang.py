@@ -6,11 +6,6 @@ passwords = ["xxxxxx", "xxxxxxxx"]
 
 
 
-
-users = ["13692603682"]
-passwords = ["246@100l6717hl"]
-
-
 import random
 import time
 import os
