@@ -5,7 +5,12 @@ users = ["xxxxxxxxx", "xxxxxxxxxxx"]
 passwords = ["xxxxxx", "xxxxxxxx"]
 
 
-import requests
+
+
+users = ["13692603682"]
+passwords = ["246@100l6717hl"]
+
+
 import random
 import time
 import os
@@ -13,26 +18,22 @@ from selenium.webdriver import ChromeOptions, Chrome
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
-from requests.adapters import HTTPAdapter
 from pyshadow.main import Shadow
 
 
 
 def input_dependence():
-    global driver, s, shadow
-    # 设置超时重试
-    s = requests.Session()
-    s.mount('http://', HTTPAdapter(max_retries=3))
-    s.mount('https://', HTTPAdapter(max_retries=3))
+    global driver, shadow
     # 启动浏览器内核
     opt = ChromeOptions()
     opt.headless = False
-    path_e = os.getcwd() + r"\buster.crx"
-    opt.add_extension(path_e)
+    # path_e = os.getcwd() + r"\buster.crx"
+    # opt.add_extension(path_e)
     path_e = os.getcwd() + r"\AutoVerify.crx"
+    opt.add_extension(path_e)
+    opt.add_argument("window-size=1920,1080")
     # opt.add_experimental_option('prefs', prefs)  # 关掉浏览器左上角的通知提示
     # opt.add_argument("disable-infobars")  # 关闭'chrome正受到自动测试软件的控制'提示
-    opt.add_extension(path_e)
     opt.add_argument('--no-sandbox')
     # 设置开发者模式启动，该模式下webdriver属性为正常值
     opt.add_experimental_option('excludeSwitches', ['enable-automation'])
