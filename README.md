@@ -8,6 +8,13 @@ ql repo https://github.com/spiritLHL/Gecko_sign.git
 pip install -r requirements.txt
 ```
 
+### TecentCloudSign.py
+
+```
+export Gecko_tecent_users="user1@qq.com&user2@163.com"
+export Gecko_tecent_passwords="password1&password"
+```
+
 ## Special statement:
 
 Any unlocking and decryption analysis scripts involved in the Script project released by this warehouse are only used for testing, learning and research, and are forbidden to be used for commercial purposes. Their legality, accuracy, completeness and effectiveness cannot be guaranteed. Please make your own judgment based on the situation. .
