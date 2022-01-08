@@ -1,18 +1,14 @@
 # Gecko_sign
 
 ```
-ql repo https://github.com/spiritLHL/Gecko_sign.git
-```
-
-```
 pip install -r requirements.txt
 ```
 
 ### Sign_TecentCloud.py
 
 ```
-export Gecko_tecent_users="user1@qq.com&user2@163.com"
-export Gecko_tecent_passwords="password1&password"
+users = ["xxxxxx@163.com", "xxxxxxxx@qq.com"]
+passwords = ["xxxxxxxxxxxx", "xxxxxxx"]
 ```
 
 ## Special statement:
