@@ -1,15 +1,9 @@
+# 作者仓库:https://github.com/spiritLHL/Gecko_sign
+# 觉得不错麻烦点个star谢谢
 '''
 cron: 8 8 * * *
 new Env('领取腾讯云签到积分');
 '''
-
-
-
-
-usrs = ["", ""]
-passwords = ["",""]
-
-
 
 
 import requests
@@ -17,7 +11,7 @@ import random
 import re
 import time
 import json
-from lxml import html
+import os
 from bs4 import BeautifulSoup
 from selenium.webdriver import Firefox, FirefoxOptions
 from selenium.webdriver.firefox.service import Service
@@ -26,6 +20,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.common.exceptions import TimeoutException
 from requests.adapters import HTTPAdapter
+
+
+usrs = os.environ["Gecko_tecent_users"].split("&")
+passwords = os.environ["Gecko_tecent_passwords"].split("&")
 
 
 def input_dependence():
