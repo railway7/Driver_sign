@@ -1,15 +1,5 @@
 # 作者仓库:https://github.com/spiritLHL/Gecko_sign
 # 觉得不错麻烦点个star谢谢
-'''
-cron: 8 8 * * *
-new Env('领取腾讯云签到积分');
-'''
-
-
-'''
-cron: 8 8 * * *
-new Env('领取腾讯云签到积分');
-'''
 
 
 
