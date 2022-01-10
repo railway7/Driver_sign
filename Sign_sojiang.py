@@ -3,19 +3,82 @@
 # 注册页面 http://www.sojiang.com/i.aspx?c=1-11501664
 # 只适配Windows，不适配Linux，Linux环境下无法加载插件
 
+# local
 users = ["xxxxxxxxx", "xxxxxxxxxxx"]
 passwords = ["xxxxxx", "xxxxxxxx"]
 
+# AC
+import sys
+
+if len(sys.argv) < 2:
+    print('argv Error')
+else:
+    users = [sys.argv[1]]
+    passwords = [sys.argv[2]]
+    if " " in users[0] and " " in passwords[0]:
+        users = users[0].split(" ")
+        passwords = passwords[0].split(" ")
+
+print(users, passwords)
 
 
 import random
 import time
 import os
+import re
+import zipfile
+import requests
+import pyshadow
+import selenium
 from selenium.webdriver import ChromeOptions, Chrome
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
-from pyshadow.main import Shadow
+
+
+
+def get_latest_version(url):
+    '''查询最新的Chromedriver版本'''
+    rep = requests.get(url).text
+    time_list = []                                          # 用来存放版本时间
+    time_version_dict = {}                                  # 用来存放版本与时间对应关系
+    result = re.compile(r'\d.*?/</a>.*?Z').findall(rep)     # 匹配文件夹（版本号）和时间
+    for i in result:
+        time = i[-24:-1]                                    # 提取时间
+        version = re.compile(r'.*?/').findall(i)[0]         # 提取版本号
+        time_version_dict[time] = version                   # 构建时间和版本号的对应关系，形成字典
+        time_list.append(time)                              # 形成时间列表
+    latest_version = time_version_dict[max(time_list)][:-1] # 用最大（新）时间去字典中获取最新的版本号
+    return latest_version
+
+def download_driver(download_url):
+    '''下载文件'''
+    file = requests.get(download_url)
+    with open(r"chromedriver.zip", 'wb') as zip_file:        # 保存文件到脚本所在目录
+        zip_file.write(file.content)
+        print('下载成功')
+
+def get_version():
+    '''查询系统内的Chromedriver版本'''
+    outstd2 = os.popen('chromedriver --version').read()
+    return outstd2.split(' ')[1]
+
+def get_path():
+    '''查询系统内Chromedriver的存放路径'''
+    outstd1 = os.popen('where chromedriver').read()
+    return outstd1.strip('chromedriver.exe')
+
+def unzip_driver(path):
+    '''解压Chromedriver压缩包到指定目录'''
+    f = zipfile.ZipFile(r"chromedriver.zip", 'r')
+    for file in f.namelist():
+        f.extract(file, path)
+
+# def un_zip(csv_path):
+# 	for f in  os.listdir(csv_path):
+# 		if ".zip" in f:
+# 			zip_file = zipfile.ZipFile(csv_path + "\\" + f)
+# 			zip_file.extract(zip_file.namelist()[0],csv_path)
 
 
 
@@ -28,7 +91,7 @@ def input_dependence():
     # opt.add_extension(path_e)
     path_e = os.getcwd() + r"\AutoVerify.crx"
     opt.add_extension(path_e)
-    # opt.add_argument("window-size=1920,1080")
+    opt.add_argument("window-size=1920,1080")
     # opt.add_experimental_option('prefs', prefs)  # 关掉浏览器左上角的通知提示
     # opt.add_argument("disable-infobars")  # 关闭'chrome正受到自动测试软件的控制'提示
     opt.add_argument('--no-sandbox')
@@ -37,10 +100,11 @@ def input_dependence():
     # opt.add_argument({"extensions.ui.developer_mode": True})
     # opt.add_experimental_option('useAutomationExtension', False)
     # opt.set_preference("extensions.firebug.allPagesActivation", "on")
-    ser = Service("chromedriver.exe")
+    opt.add_experimental_option('excludeSwitches', ['enable-logging'])
+    ser = Service("chromedriver")
     driver = Chrome(service=ser, options=opt)
     # 加载影子模块
-    shadow = Shadow(driver)
+    shadow = pyshadow.main.Shadow(driver)
     driver.set_page_load_timeout(300)
 
 def change_seeting():
@@ -156,8 +220,37 @@ def main(user, password):
     print("关闭浏览器内核完毕")
     print("====================================")
 
-
+#
 if __name__ == '__main__':
+    try:
+        url = 'http://npm.taobao.org/mirrors/chromedriver/'
+        latest_version = get_latest_version(url)
+        print('最新的chromedriver版本为：', latest_version)
+        version = get_version()
+        print('当前系统内的Chromedriver版本为：', version)
+        if version == latest_version:
+            print('当前系统内的Chromedriver已经是最新的')
+        else:
+            print('当前系统内的Chromedriver不是最新的，需要进行更新')
+            download_url = url + latest_version + '/chromedriver_win32.zip'  # 拼接下载链接
+            download_driver(download_url)
+            path = get_path()
+            print('替换路径为：', path)
+            unzip_driver(path)
+            # un_zip(path)
+            print('更新后的Chromedriver版本为：', get_version())
+    except:
+        pass
+        # url = 'http://npm.taobao.org/mirrors/chromedriver/'
+        # latest_version = get_latest_version(url)
+        # download_url = url + latest_version + '/chromedriver_win32.zip'  # 拼接下载链接
+        # download_driver(download_url)
+        # path = get_path()
+        # print('替换路径为：', path)
+        # unzip_driver(path)
+        # # un_zip(path)
+        # print('更新后的Chromedriver版本为：', get_version())
+    print("=================================================")
     print("开始脚本运行")
     for i, j in zip(users, passwords):
         main(i, j)
