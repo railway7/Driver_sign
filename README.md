@@ -29,7 +29,9 @@ passwords = ["xxxxxxxxxxxx", "xxxxxxx"]
 
 Adapted Environment: Github Actions
 
-Please create your own workflow by mimicking Sign_sojiang.yml file.
+[Tutorial link](https://lo-victoria.com/github-actions-101-creating-your-first-workflow#Create%20your%20First%20Workflow)
+
+Please create your own workflow by mimicking [Sign_sojiang.yml](https://github.com/spiritLHL/Driver_sign/blob/master/Sign_sojiang.yml) file.
 
 ![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/QQ%E5%9B%BE%E7%89%8720220110164439.png)
 
