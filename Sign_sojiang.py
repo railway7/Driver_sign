@@ -34,6 +34,7 @@ from selenium.webdriver import ChromeOptions, Chrome
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
+from pyshadow.main import Shadow
 from translate import Translator
 
 class LanguageTrans():
@@ -117,7 +118,7 @@ def input_dependence():
     ser = Service("chromedriver")
     driver = Chrome(service=ser, options=opt)
     # 加载影子模块
-    shadow = pyshadow.main.Shadow(driver)
+    shadow = Shadow(driver)
     driver.set_page_load_timeout(300)
 
 def change_seeting():
