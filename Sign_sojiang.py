@@ -239,33 +239,33 @@ def main(user, password):
 
 translator = LanguageTrans("C2E")
 if __name__ == '__main__':
-    try:
-        url = 'http://npm.taobao.org/mirrors/chromedriver/'
-        latest_version = get_latest_version(url)
-        print(translator.trans('最新的chromedriver版本为 '), latest_version)
-        version = get_version()
-        print(translator.trans('当前系统内的Chromedriver版本为 ', version))
-        if version == latest_version:
-            print(translator.trans('当前系统内的Chromedriver已经是最新的'))
-        else:
-            print(translator.trans('当前系统内的Chromedriver不是最新的，需要进行更新'))
-            download_url = url + latest_version + '/chromedriver_win32.zip'  # 拼接下载链接
-            download_driver(download_url)
-            path = get_path()
-            unzip_driver(path)
-            # un_zip(path)
-            print(translator.trans('更新后的Chromedriver版本为'), get_version())
-    except:
-        pass
-        # url = 'http://npm.taobao.org/mirrors/chromedriver/'
-        # latest_version = get_latest_version(url)
-        # download_url = url + latest_version + '/chromedriver_win32.zip'  # 拼接下载链接
-        # download_driver(download_url)
-        # path = get_path()
-        # print('替换路径为：', path)
-        # unzip_driver(path)
-        # # un_zip(path)
-        # print('更新后的Chromedriver版本为：', get_version())
+#     try:
+#         url = 'http://npm.taobao.org/mirrors/chromedriver/'
+#         latest_version = get_latest_version(url)
+#         print(translator.trans('最新的chromedriver版本为 '), latest_version)
+#         version = get_version()
+#         print(translator.trans('当前系统内的Chromedriver版本为 ', version))
+#         if version == latest_version:
+#             print(translator.trans('当前系统内的Chromedriver已经是最新的'))
+#         else:
+#             print(translator.trans('当前系统内的Chromedriver不是最新的，需要进行更新'))
+#             download_url = url + latest_version + '/chromedriver_win32.zip'  # 拼接下载链接
+#             download_driver(download_url)
+#             path = get_path()
+#             unzip_driver(path)
+#             # un_zip(path)
+#             print(translator.trans('更新后的Chromedriver版本为'), get_version())
+#     except:
+#         pass
+#         # url = 'http://npm.taobao.org/mirrors/chromedriver/'
+#         # latest_version = get_latest_version(url)
+#         # download_url = url + latest_version + '/chromedriver_win32.zip'  # 拼接下载链接
+#         # download_driver(download_url)
+#         # path = get_path()
+#         # print('替换路径为：', path)
+#         # unzip_driver(path)
+#         # # un_zip(path)
+#         # print('更新后的Chromedriver版本为：', get_version())
     print("=================================================")
     print(translator.trans("开始脚本运行"))
     for i, j in zip(users, passwords):
