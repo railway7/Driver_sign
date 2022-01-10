@@ -135,8 +135,12 @@ def change_seeting():
     # element.send_keys(Keys.CONTROL + Keys.DOWN + Keys.DOWN + Keys.ENTER)
     all_options = element.find_elements(By.TAG_NAME, "option")
     for option in all_options:
-        print(translator.trans("选项显示的文本 "), option.text)
-        print(translator.trans("选项值为 "), option.get_attribute("value"))
+        try:
+            print(translator.trans("选项显示的文本 "), translator.trans(option.text))
+            print(translator.trans("选项值为 "), translator.trans(option.get_attribute("value")))
+        except:
+            print(translator.trans("选项显示的文本 "), option.text)
+            print(translator.trans("选项值为 "), option.get_attribute("value"))
     # WebDriverWait(option, 3, 0.1).until(EC.element_to_be_clickable((By.LINK_TEXT, '在所有网站上'))).click()
     time.sleep(2)
     option.click()
