@@ -96,8 +96,7 @@ def unzip_driver(path):
 
 
 def input_dependence():
-    global driver, shadow, translator
-    translator = LanguageTrans("C2E")
+    global driver, shadow
     # 启动浏览器内核
     opt = ChromeOptions()
     opt.headless = False
@@ -234,7 +233,7 @@ def main(user, password):
     print(translator.trans("关闭浏览器内核完毕"))
     print("====================================")
 
-#
+translator = LanguageTrans("C2E")
 if __name__ == '__main__':
     try:
         url = 'http://npm.taobao.org/mirrors/chromedriver/'
