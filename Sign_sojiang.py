@@ -10,14 +10,17 @@ passwords = ["xxxxxx", "xxxxxxxx"]
 # AC
 import sys
 
-if len(sys.argv) < 2:
-    print('argv Error')
-else:
-    users = [sys.argv[1]]
-    passwords = [sys.argv[2]]
-    if " " in users[0] and " " in passwords[0]:
-        users = users[0].split(" ")
-        passwords = passwords[0].split(" ")
+try:
+    if len(sys.argv) < 2:
+        print('argv Error')
+    else:
+        users = [sys.argv[1]]
+        passwords = [sys.argv[2]]
+        if " " in users[0] and " " in passwords[0]:
+            users = users[0].split(" ")
+            passwords = passwords[0].split(" ")
+except:
+    pass
 
 print(users, passwords)
 
