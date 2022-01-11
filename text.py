@@ -168,30 +168,34 @@ def sign_in():
     driver.find_element(By.XPATH, '/html/body/main/div/div/div[2]/div/div/div/div/div/form/button').click()
     time.sleep(30)
 
-driver = input_dependence()
-translator = LanguageTrans("C2E")
-time.sleep(3)
-# 选项修改
-load_driver("chrome://extensions/")
-change_seeting()
-time.sleep(3)
-count = 0
-while driver.current_url != "https://hax.co.id/vps-info/":
-    print("Reload sign pages")
-    sign_in()
-    time.sleep(random.uniform(10, 20))
-    count += 1
-    if count >= 10:
-        exit(3)
 
-if driver.current_url == "https://hax.co.id/vps-info/":
+translator = LanguageTrans("C2E")
+if __name__ == '__main__':
+    input_dependence()
+    translator = LanguageTrans("C2E")
+    time.sleep(3)
+    # 选项修改
+    load_driver("chrome://extensions/")
+    change_seeting()
+    time.sleep(3)
+    count = 0
+    while True:
+        print("Reload sign pages")
+        sign_in()
+        time.sleep(random.uniform(10, 20))
+        count += 1
+        if count >= 10:
+            exit(3)
+        if driver.current_url == "https://hax.co.id/vps-info/":
+            break
+
     print("login sucess")
     load_driver('https://hax.co.id/vps-renew/')
     time.sleep(5)
     driver.find_element(By.XPATH, '//*[@id="web_address"]').send_keys("hax.co.id")
     time.sleep(3)
     driver.find_element(By.XPATH,
-        '/html/body/main/div/div/div[2]/div/div/div/div/div/form/fieldset/div/div/div/input').click()
+                        '/html/body/main/div/div/div[2]/div/div/div/div/div/form/fieldset/div/div/div/input').click()
     time.sleep(5)
     try:
         driver.find_element(By.XPATH, '/html/body/div[2]/div[3]/div[1]/div/div/span/div[4]').click()
@@ -201,6 +205,7 @@ if driver.current_url == "https://hax.co.id/vps-info/":
     driver.find_element(By.XPATH, '/html/body/main/div/div/div[2]/div/div/div/div/div/form/button').click()
     time.sleep(30)
     print("Renew OK!")
+
 
 
 
