@@ -177,8 +177,8 @@ if __name__ == '__main__':
     count = 0
     while True:
         print("Reload sign pages")
-        sign_in()
         try:
+            sign_in()
             driver.switch_to.default_content()
             driver.switch_to.default_content()
             driver.find_element(By.XPATH, '/html/body/main/div/div/div[2]/div/div/div/div/div/form/button').click()
