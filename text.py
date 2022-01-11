@@ -34,13 +34,7 @@ from selenium.webdriver import DesiredCapabilities
 # import undetected_chromedriver as uc
 from pyshadow.main import Shadow
 from translate import Translator
-
-
-
 import requests
-
-proxypool_url = 'http://81.70.76.127:5555/random'
-target_url = 'http://httpbin.org/get'
 
 def get_random_proxy():
     """
