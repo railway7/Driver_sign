@@ -34,14 +34,7 @@ from selenium.webdriver import DesiredCapabilities
 # import undetected_chromedriver as uc
 from pyshadow.main import Shadow
 from translate import Translator
-import requests
 
-def get_random_proxy():
-    """
-    get random proxy from proxypool
-    :return: proxy
-    """
-    return requests.get(proxypool_url).text.strip()
 
 
 class LanguageTrans():
@@ -167,7 +160,7 @@ def sign_in():
     Ac = ActionChains(driver)
     Ac.send_keys(Keys.TAB).perform()
     Ac.send_keys(Keys.ENTER).perform()
-    print(translator.trans(""点击了"))
+    print(translator.trans("点击了"))
     time.sleep(3)
     driver.find_element(By.CSS_SELECTOR,
                         'body > div > div > div.rc-footer > div.rc-controls > div.primary-controls > div.rc-buttons > div.button-holder.help-button-holder')
