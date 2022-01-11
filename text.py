@@ -78,7 +78,8 @@ def input_dependence():
     opt.add_extension(path_e)
     path_e = os.getcwd() + r"\canvas-fingerprint-blocker.crx"
     opt.add_extension(path_e)
-    opt.add_argument("window-size=1920,1080")
+#     opt.add_argument("window-size=1920,1080")
+    opt.add_argument("--start-maximized")
     opt.add_argument('--no-sandbox')
     # 设置开发者模式启动，该模式下webdriver属性为正常值
     opt.add_experimental_option('excludeSwitches', ['enable-automation'])
@@ -97,9 +98,9 @@ def change_seeting():
     element.click()
     time.sleep(3)
     element = shadow.find_element('#detailsButton')
-    time.sleep(2)
+    time.sleep(3)
     element.click()
-    time.sleep(2)
+    time.sleep(3)
     element = shadow.find_element('#host-access')
     element.click()
     # element.click()
