@@ -169,7 +169,11 @@ if __name__ == '__main__':
     time.sleep(3)
     # 选项修改
     load_driver("chrome://extensions/")
-    change_seeting()
+    time.sleep(5)
+    try:
+        change_seeting()
+    except:
+        pass
     count = 0
     while True:
         print("Reload sign pages")
