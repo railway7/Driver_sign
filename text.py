@@ -91,14 +91,6 @@ def input_dependence():
     driver.set_page_load_timeout(300)
     return driver
 
-def control_in_shadow(driver, js):
-    shadow = driver.execute_script(js)
-    return shadow
-
-def expand_shadow_element(element):
-  shadow_root = driver.execute_script('return arguments[0].shadowRoot', element)
-  return shadow_root
-
 def change_seeting():
     global driver, shadow
     element = shadow.find_element("#devMode")
@@ -135,7 +127,7 @@ def change_seeting():
 def sign_in():
     global driver
     # 加载登陆界面
-    driver.get("https://hax.co.id/login")
+    load_driver("https://hax.co.id/login")
     time.sleep(6)
     # 输入登陆信息
     ID = users[0]
