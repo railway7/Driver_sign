@@ -99,35 +99,6 @@ def expand_shadow_element(element):
   shadow_root = driver.execute_script('return arguments[0].shadowRoot', element)
   return shadow_root
 
-def change_seeting():
-    global driver, shadow
-    element = shadow.find_element("#devMode")
-    element.click()
-    time.sleep(3)
-    element = shadow.find_element('#detailsButton')
-    time.sleep(2)
-    element.click()
-    time.sleep(5)
-    element = shadow.find_element('#host-access')
-    element.click()
-    all_options = element.find_elements(By.TAG_NAME, "option")
-    for option in all_options:
-        try:
-            print(translator.trans("选项显示的文本 "), translator.trans(option.text))
-            print(translator.trans("选项值为 "), translator.trans(option.get_attribute("value")))
-        except:
-            print(translator.trans("选项显示的文本 "), option.text)
-            print(translator.trans("选项值为 "), option.get_attribute("value"))
-    time.sleep(2)
-    option.click()
-    element = shadow.find_element('#centeredContent')
-    time.sleep(2)
-    element.click()
-    time.sleep(2)
-    element = shadow.find_element('#closeButton')
-    time.sleep(2)
-    element.click()
-    time.sleep(2)
 
 def sign_in():
     global driver
@@ -176,7 +147,33 @@ if __name__ == '__main__':
     time.sleep(3)
     # 选项修改
     load_driver("chrome://extensions/")
-    change_seeting()
+    element = shadow.find_element("#devMode")
+    element.click()
+    time.sleep(3)
+    element = shadow.find_element('#detailsButton')
+    time.sleep(2)
+    element.click()
+    time.sleep(5)
+    element = shadow.find_element('#host-access')
+    element.click()
+    all_options = element.find_elements(By.TAG_NAME, "option")
+    for option in all_options:
+        try:
+            print(translator.trans("选项显示的文本 "), translator.trans(option.text))
+            print(translator.trans("选项值为 "), translator.trans(option.get_attribute("value")))
+        except:
+            print(translator.trans("选项显示的文本 "), option.text)
+            print(translator.trans("选项值为 "), option.get_attribute("value"))
+    time.sleep(2)
+    option.click()
+    element = shadow.find_element('#centeredContent')
+    time.sleep(2)
+    element.click()
+    time.sleep(2)
+    element = shadow.find_element('#closeButton')
+    time.sleep(2)
+    element.click()
+    time.sleep(2)
     time.sleep(3)
     count = 0
     while True:
