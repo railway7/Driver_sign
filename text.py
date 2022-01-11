@@ -89,6 +89,7 @@ def input_dependence():
     # driver = uc.Chrome(browser_executable_path="chromedriver", options=opt, suppress_welcome=False, use_subprocess=True) # service=ser, options=opt
     shadow = Shadow(driver)
     driver.set_page_load_timeout(300)
+    return driver
 
 def control_in_shadow(driver, js):
     shadow = driver.execute_script(js)
@@ -129,14 +130,7 @@ def change_seeting():
     time.sleep(2)
 
 def sign_in():
-    global translator, driver
-    input_dependence()
-    translator = LanguageTrans("C2E")
-    time.sleep(3)
-    # 选项修改
-    load_driver("chrome://extensions/")
-    change_seeting()
-    time.sleep(3)
+    global driver
     # 加载登陆界面
     driver.get("https://hax.co.id/login")
     time.sleep(6)
@@ -174,6 +168,13 @@ def sign_in():
     driver.find_element(By.XPATH, '/html/body/main/div/div/div[2]/div/div/div/div/div/form/button').click()
     time.sleep(30)
 
+driver = input_dependence()
+translator = LanguageTrans("C2E")
+time.sleep(3)
+# 选项修改
+load_driver("chrome://extensions/")
+change_seeting()
+time.sleep(3)
 count = 0
 while driver.current_url != "https://hax.co.id/vps-info/":
     print("Reload sign pages")
@@ -184,19 +185,20 @@ while driver.current_url != "https://hax.co.id/vps-info/":
         exit(3)
 
 if driver.current_url == "https://hax.co.id/vps-info/":
+    print("login sucess")
     load_driver('https://hax.co.id/vps-renew/')
     time.sleep(5)
-    driver.find_element_by_xpath('//*[@id="web_address"]').send_keys("hax.co.id")
+    driver.find_element(By.XPATH, '//*[@id="web_address"]').send_keys("hax.co.id")
     time.sleep(3)
-    driver.find_element_by_xpath(
+    driver.find_element(By.XPATH,
         '/html/body/main/div/div/div[2]/div/div/div/div/div/form/fieldset/div/div/div/input').click()
     time.sleep(5)
     try:
-        driver.find_element_by_xpath('/html/body/div[2]/div[3]/div[1]/div/div/span/div[4]').click()
+        driver.find_element(By.XPATH, '/html/body/div[2]/div[3]/div[1]/div/div/span/div[4]').click()
         time.sleep(3)
     except:
         time.sleep(3)
-    driver.find_element_by_xpath('/html/body/main/div/div/div[2]/div/div/div/div/div/form/button').click()
+    driver.find_element(By.XPATH, '/html/body/main/div/div/div[2]/div/div/div/div/div/form/button').click()
     time.sleep(30)
     print("Renew OK!")
 
