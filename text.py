@@ -174,10 +174,14 @@ def sign_in():
     driver.find_element(By.XPATH, '/html/body/main/div/div/div[2]/div/div/div/div/div/form/button').click()
     time.sleep(30)
 
+count = 0
 while driver.current_url != "https://hax.co.id/vps-info/":
     print("Reload sign pages")
     sign_in()
     time.sleep(random.uniform(10, 20))
+    count += 1
+    if count >= 10:
+        exit(3)
 
 if driver.current_url == "https://hax.co.id/vps-info/":
     load_driver('https://hax.co.id/vps-renew/')
