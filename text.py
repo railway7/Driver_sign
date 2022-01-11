@@ -129,7 +129,7 @@ def sign_in():
     global driver
     # 加载登陆界面
     load_driver("https://hax.co.id/login")
-    time.sleep(6)
+    time.sleep(60)
     # 输入登陆信息
     ID = users[0]
     password = passwords[0]
