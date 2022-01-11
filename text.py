@@ -134,10 +134,7 @@ def sign_in():
     Bc.send_keys(Keys.ENTER).perform()
     time.sleep(5)
     print(1)
-    driver.switch_to.default_content()
-    driver.switch_to.default_content()
-    driver.find_element(By.XPATH, '/html/body/main/div/div/div[2]/div/div/div/div/div/form/button').click()
-    time.sleep(30)
+
 
 
 translator = LanguageTrans("C2E")
@@ -179,6 +176,13 @@ if __name__ == '__main__':
     while True:
         print("Reload sign pages")
         sign_in()
+        try:
+            driver.switch_to.default_content()
+            driver.switch_to.default_content()
+            driver.find_element(By.XPATH, '/html/body/main/div/div/div[2]/div/div/div/div/div/form/button').click()
+            time.sleep(30)
+        except: 
+            pass
         time.sleep(random.uniform(10, 20))
         count += 1
         if count >= 10:
