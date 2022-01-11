@@ -74,9 +74,9 @@ def input_dependence():
     opt.headless = False
     path_e = os.getcwd() + r"\buster.crx"
     opt.add_extension(path_e)
-    path_e = os.getcwd() + r"\random-user-agent.crx"
-    opt.add_extension(path_e)
-    path_e = os.getcwd() + r"\canvas-fingerprint-blocker.crx"
+#     path_e = os.getcwd() + r"\random-user-agent.crx"
+#     opt.add_extension(path_e)
+#     path_e = os.getcwd() + r"\canvas-fingerprint-blocker.crx"
     opt.add_extension(path_e)
 #     opt.add_argument("window-size=1920,1080")
     opt.add_argument("--start-maximized")
@@ -100,7 +100,7 @@ def change_seeting():
     element = shadow.find_element('#detailsButton')
     time.sleep(3)
     element.click()
-    time.sleep(3)
+    time.sleep(10)
     element = shadow.find_element('#host-access')
     element.click()
     # element.click()
