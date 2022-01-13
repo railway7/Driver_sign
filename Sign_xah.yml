@@ -1,0 +1,17 @@
+name: Sign_xah
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '13 19 */3 * *'
+jobs:
+  soujiang:
+    runs-on: windows-2022
+    
+    steps:
+      - name: 'Sign_xah' 
+        run: |
+          cmd /c curl -s -O https://raw.githubusercontent.com/spiritLHL/Gecko_sign/master/chromedriver.exe
+          cmd /c curl -s -O https://raw.githubusercontent.com/spiritLHL/Gecko_sign/master/Sign_xah.exe
+          #cmd /c Sign_xah.exe "账号1 账号2 账号3" "密码1 密码2 密码3" "腾讯云访问密钥secretID" "腾讯云访问密钥secretkey" "邮箱"
+          cmd /c Sign_xah.exe "账号1" "密码1" "腾讯云访问密钥secretID" "腾讯云访问密钥secretkey" "邮箱"
