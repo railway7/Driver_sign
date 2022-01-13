@@ -41,9 +41,15 @@ Adapted Environment: Windows
 
 You need to enable the Tencent Cloud speech recognition function in advance.
 
+https://console.cloud.tencent.com/asr
 
-Then set a Tencent Cloud access key
+Then set a Tencent Cloud access key.
 
+https://console.cloud.tencent.com/cam/capi
+
+Please download the Google Chrome driver corresponding to your local Google Chrome.
+
+https://blog.csdn.net/zhoukeguai/article/details/113247342
 
 Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every 2 days.
 
@@ -59,16 +65,21 @@ Adapted Environment: Github Actions
 
 Please create your own workflow by mimicking [Sign_xah.yml](https://github.com/spiritLHL/Driver_sign/blob/master/Sign_xah.yml) file.
 
-
 You need to enable the Tencent Cloud speech recognition function in advance.
 
+https://console.cloud.tencent.com/asr
 
-Then set a Tencent Cloud access key
+Then set a Tencent Cloud access key.
 
+https://console.cloud.tencent.com/cam/capi
+
+Please download the Google Chrome driver corresponding to your local Google Chrome.
+
+https://blog.csdn.net/zhoukeguai/article/details/113247342
 
 Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every 2 days.
 
-![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/hax.png)
+![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/xah.png)
 
 ## Special statement:
 
