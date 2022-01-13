@@ -35,6 +35,22 @@ Please create your own workflow by mimicking [Sign_sojiang.yml](https://github.c
 
 ![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/QQ%E5%9B%BE%E7%89%8720220110164439.png)
 
+### Sign_xah.exe
+
+Adapted Environment: Windows
+
+You need to enable the Tencent Cloud speech recognition function in advance.
+
+
+Then set a Tencent Cloud access key
+
+
+Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every 2 days.
+
+```
+Sign_xah.exe "tgid" "password" "Tencent cloud access key secret ID" "Tencent cloud access key secret key" "email"
+```
+
 ### Sign_xah.yml
 
 Adapted Environment: Github Actions
@@ -42,6 +58,13 @@ Adapted Environment: Github Actions
 [Tutorial link](https://lo-victoria.com/github-actions-101-creating-your-first-workflow#Create%20your%20First%20Workflow)
 
 Please create your own workflow by mimicking [Sign_xah.yml](https://github.com/spiritLHL/Driver_sign/blob/master/Sign_xah.yml) file.
+
+
+You need to enable the Tencent Cloud speech recognition function in advance.
+
+
+Then set a Tencent Cloud access key
+
 
 Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every 2 days.
 
