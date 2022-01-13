@@ -35,6 +35,18 @@ Please create your own workflow by mimicking [Sign_sojiang.yml](https://github.c
 
 ![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/QQ%E5%9B%BE%E7%89%8720220110164439.png)
 
+### Sign_xah.yml
+
+Adapted Environment: Github Actions
+
+[Tutorial link](https://lo-victoria.com/github-actions-101-creating-your-first-workflow#Create%20your%20First%20Workflow)
+
+Please create your own workflow by mimicking [Sign_xah.yml](https://github.com/spiritLHL/Driver_sign/blob/master/Sign_xah.yml) file.
+
+Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every 2 days.
+
+![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/hax.png)
+
 ## Special statement:
 
 Any unlocking and decryption analysis scripts involved in the Script project released by this warehouse are only used for testing, learning and research, and are forbidden to be used for commercial purposes. Their legality, accuracy, completeness and effectiveness cannot be guaranteed. Please make your own judgment based on the situation. .
