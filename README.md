@@ -33,6 +33,8 @@ Adapted Environment: Github Actions
 
 Please create your own workflow by mimicking [Sign_sojiang.yml](https://github.com/spiritLHL/Driver_sign/blob/master/Sign_sojiang.yml) file.
 
+Use a private repo to prevent your own data from being leaked.
+
 ![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/QQ%E5%9B%BE%E7%89%8720220110164439.png)
 
 ### Sign_xah.exe
@@ -64,6 +66,8 @@ Adapted Environment: Github Actions
 [Tutorial link](https://lo-victoria.com/github-actions-101-creating-your-first-workflow#Create%20your%20First%20Workflow)
 
 Please create your own workflow by mimicking [Sign_xah.yml](https://github.com/spiritLHL/Driver_sign/blob/master/Sign_xah.yml) file.
+
+Use a private repo to prevent your own data from being leaked.
 
 You need to enable the Tencent Cloud speech recognition function in advance.
 
