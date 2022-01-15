@@ -5,7 +5,7 @@ on:
   schedule:
     - cron: '13 19 */3 * *'
 jobs:
-  soujiang:
+  XAH:
     runs-on: windows-2022
     
     steps:
