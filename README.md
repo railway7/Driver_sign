@@ -53,7 +53,7 @@ Please download the Google Chrome driver corresponding to your local Google Chro
 
 https://blog.csdn.net/zhoukeguai/article/details/113247342
 
-Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every 2 days.
+Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every days.
 
 ```
 Sign_xah.exe "tgid" "password" "Tencent cloud access key secret ID" "Tencent cloud access key secret key" "email"
@@ -81,7 +81,7 @@ Please download the Google Chrome driver corresponding to your local Google Chro
 
 https://blog.csdn.net/zhoukeguai/article/details/113247342
 
-Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every 2 days.
+Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every days.
 
 ![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/xah.png)
 
