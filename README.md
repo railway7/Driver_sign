@@ -53,6 +53,8 @@ Please download the Google Chrome driver corresponding to your local Google Chro
 
 https://blog.csdn.net/zhoukeguai/article/details/113247342
 
+It is recommended to use a single account and a single email for each Action. Using multiple accounts in an Action can easily trigger exceptions.
+
 Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every days.
 
 ```
@@ -80,6 +82,8 @@ https://console.cloud.tencent.com/cam/capi
 Please download the Google Chrome driver corresponding to your local Google Chrome.
 
 https://blog.csdn.net/zhoukeguai/article/details/113247342
+
+It is recommended to use a single account and a single email for each Action. Using multiple accounts in an Action can easily trigger exceptions.
 
 Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every days.
 
