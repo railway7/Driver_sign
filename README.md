@@ -59,7 +59,7 @@ https://blog.csdn.net/zhoukeguai/article/details/113247342
 
 It is recommended to use a single account and a single email. Using multiple accounts can easily trigger exceptions.
 
-Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every days.
+Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every 2 days.
 
 ```
 Sign_xah.exe "tgid" "password" "Tencent cloud access key secret ID" "Tencent cloud access key secret key" "email"
@@ -89,7 +89,7 @@ https://blog.csdn.net/zhoukeguai/article/details/113247342
 
 It is recommended to use a single account and a single email for each Action. Using multiple accounts in an Action can easily trigger exceptions.
 
-Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every days.
+Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every 2 days.
 
 ![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/xah.png)
 
@@ -111,7 +111,7 @@ Then you need to put the corresponding google chrome version of chromedriver und
 
 It is recommended to use a single account and a single email. Using multiple accounts can easily trigger exceptions.
 
-Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every days.
+Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every 2 days.
 
 **Download link:[https://disk.yandex.com/d/bAenxdt-7wa92A](https://disk.yandex.com/d/bAenxdt-7wa92A)**
 
