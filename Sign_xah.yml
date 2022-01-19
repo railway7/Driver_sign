@@ -3,7 +3,7 @@ name: Sign_xah
 on:
   workflow_dispatch:
   schedule:
-    - cron: '13 19 * * *'
+    - cron: '13 19 */2 * *'
 jobs:
   XAH:
     runs-on: windows-2022
