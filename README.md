@@ -57,7 +57,7 @@ Please download the Google Chrome driver corresponding to your local Google Chro
 
 https://blog.csdn.net/zhoukeguai/article/details/113247342
 
-It is recommended to use a single account and a single email for each Action. Using multiple accounts in an Action can easily trigger exceptions.
+It is recommended to use a single account and a single email. Using multiple accounts can easily trigger exceptions.
 
 Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every days.
 
@@ -92,6 +92,30 @@ It is recommended to use a single account and a single email for each Action. Us
 Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every days.
 
 ![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/xah.png)
+
+### Sign_xah_linux
+
+Adapted Environment: Linux
+
+You need to enable the Tencent Cloud speech recognition function in advance.
+
+https://console.cloud.tencent.com/asr
+
+Then set a Tencent Cloud access key.
+
+https://console.cloud.tencent.com/cam/capi
+
+You need to install google chrome locally on Linux.
+
+Then you need to put the corresponding google chrome version of chrome under the same folder of the script.
+
+It is recommended to use a single account and a single email. Using multiple accounts can easily trigger exceptions.
+
+Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every days.
+
+**link:[https://disk.yandex.com/d/bAenxdt-7wa92A](https://disk.yandex.com/d/bAenxdt-7wa92A)**
+
+ps:This file is particularly large.(256M)
 
 ### My Blog Link: [www.spiritlhl.top/](https://www.spiritlhl.top/)
 
