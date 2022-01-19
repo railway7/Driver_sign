@@ -20,6 +20,8 @@ passwords = ["xxxxxxxxxxxx", "xxxxxxx"]
 
 Adapted Environment: Windows
 
+Wait for the plugin author to update, otherwise the verification code will not be recognized and passed.(2022.1.19)
+
 ```
 users = ["xxxxxx@163.com", "xxxxxxxx@qq.com"]
 passwords = ["xxxxxxxxxxxx", "xxxxxxx"]
@@ -34,6 +36,8 @@ Adapted Environment: Github Actions
 Please create your own workflow by mimicking [Sign_sojiang.yml](https://github.com/spiritLHL/Driver_sign/blob/master/Sign_sojiang.yml) file.
 
 Use a private repo to prevent your own data from being leaked.
+
+Wait for the plugin author to update, otherwise the verification code will not be recognized and passed.(2022.1.19)
 
 ![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/QQ%E5%9B%BE%E7%89%8720220110164439.png)
 
@@ -88,6 +92,12 @@ It is recommended to use a single account and a single email for each Action. Us
 Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every days.
 
 ![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/xah.png)
+
+### My Blog Link: [www.spiritlhl.top/](https://www.spiritlhl.top/)
+
+There are blog posts about the results of my research.
+
+Clicking on the blog's ad jump is my sponsorship.:)
 
 ## Special statement:
 
