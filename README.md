@@ -113,7 +113,7 @@ It is recommended to use a single account and a single email. Using multiple acc
 
 Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every days.
 
-**link:[https://disk.yandex.com/d/bAenxdt-7wa92A](https://disk.yandex.com/d/bAenxdt-7wa92A)**
+**Download link:[https://disk.yandex.com/d/bAenxdt-7wa92A](https://disk.yandex.com/d/bAenxdt-7wa92A)**
 
 ps:This file is particularly large.(256M)
 
