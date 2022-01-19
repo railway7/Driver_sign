@@ -107,7 +107,7 @@ https://console.cloud.tencent.com/cam/capi
 
 You need to install google chrome locally on Linux.
 
-Then you need to put the corresponding google chrome version of chrome under the same folder of the script.
+Then you need to put the corresponding google chrome version of chromedriver under the same folder of the script.
 
 It is recommended to use a single account and a single email. Using multiple accounts can easily trigger exceptions.
 
