@@ -117,6 +117,18 @@ Most importantly, you need to contact me to add your mailbox to the checklist, a
 
 ps:This file is particularly large.(256M)
 
+### Sign_google.yml
+
+Adapted Environment: Github Actions
+
+[Tutorial link](https://lo-victoria.com/github-actions-101-creating-your-first-workflow#Create%20your%20First%20Workflow)
+
+Please create your own workflow by mimicking [Sign_google.yml](https://github.com/spiritLHL/Driver_sign/blob/master/Sign_google.yml) file.
+
+Use a private repo to prevent your own data from being leaked.
+
+Do not run it frequently (preferably once every three days or so), otherwise it will trigger an account ban for ADS.
+
 ### My Blog Link: [www.spiritlhl.top/](https://www.spiritlhl.top/)
 
 There are blog posts about the results of my research.
