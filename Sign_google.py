@@ -41,7 +41,7 @@ def input_dependence():
     global driver, shadow
     # 启动浏览器内核
     opt = ChromeOptions()
-    opt.headless = False
+    opt.headless = True
     # path_e = os.getcwd() + r"\buster.crx"
     # opt.add_extension(path_e)
     # path_e = os.getcwd() + r"\AutoVerify.crx"
