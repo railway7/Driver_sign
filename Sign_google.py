@@ -92,6 +92,9 @@ def main(url):
     list_site_urls = random.sample(list_site_urls, len(list_site_urls))
     if len(list_site_urls) > 15:
         list_site_urls = list_site_urls[0:15]
+    if len(list_urls) > len(list_site_urls):
+        for i in range(0, len(list_urls)):
+            list_site_urls.append(list_site_urls[i])
     list_urls.extend(list_site_urls)
     list_urls = random.sample(list_urls, len(list_urls))
     for j in list_urls:
@@ -120,11 +123,11 @@ translator = LanguageTrans("C2E")
 if __name__ == '__main__':
     print("=================================================")
     print(translator.trans("开始脚本运行"))
-    time.sleep(random.uniform(0, 3000))
+    # time.sleep(random.uniform(0, 3000))
     try:
-        print(1)
         main(url)
         close_driver()
+        print(1)
     except:
         pass
     print(translator.trans("结束脚本运行"))
