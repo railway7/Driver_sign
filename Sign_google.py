@@ -4,7 +4,7 @@ if len(sys.argv) < 1:
     print('')
     sys.exit()
 else:
-    url = [sys.argv[1]]
+    url = sys.argv[1]
 
 
 import random
