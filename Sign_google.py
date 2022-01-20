@@ -118,7 +118,7 @@ def main(url):
     
 
 def close_driver():
-    global driver, contents
+    global driver
     # 关闭浏览器内核
     try:
         driver.quit()
@@ -126,7 +126,6 @@ def close_driver():
         print(e)
         print("driver closed")
     print(translator.trans("关闭浏览器内核完毕"))
-    contents.append(translator.trans("关闭浏览器内核完毕"))
 
 
 translator = LanguageTrans("C2E")
