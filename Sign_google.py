@@ -1,3 +1,12 @@
+import sys
+
+if len(sys.argv) < 1:
+    print('')
+    sys.exit()
+else:
+    url = [sys.argv[1]]
+
+
 import random
 import time
 from selenium.webdriver import ChromeOptions, Chrome
@@ -49,11 +58,11 @@ def input_dependence():
 
 
 
-def main():
+def main(url):
     input_dependence()
-    driver.get('https://www.spiritlhl.top/')
+    driver.get(url)
     time.sleep(3)
-    driver.get('https://www.spiritlhl.top/')
+    driver.get(url)
     time.sleep(60)
     WebDriverWait(driver, 30, 1).until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[3]/main/div/div/div/div[2]')))
     driver.switch_to.frame(driver.find_element(By.NAME, 'aswift_1'))
@@ -87,12 +96,12 @@ if __name__ == '__main__':
     print(translator.trans("开始脚本运行"))
     try:
         print(1)
-        main()
+        main(url)
         close_driver()
     except:
         try:
             print(2)
-            main()
+            main(url)
             close_driver()
         except:
             pass
