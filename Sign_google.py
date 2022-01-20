@@ -52,6 +52,8 @@ def input_dependence():
     opt.add_argument('--no-sandbox')
     # 设置开发者模式启动，该模式下webdriver属性为正常值
     opt.add_experimental_option('excludeSwitches', ['enable-automation'])
+    opt.add_argument('--disable-gpu')
+    opt.add_argument('--disable-dev-shm-usage')
     # opt.add_argument({"extensions.ui.developer_mode": True})
     # opt.add_experimental_option('useAutomationExtension', False)
     # opt.set_preference("extensions.firebug.allPagesActivation", "on")
