@@ -117,6 +117,14 @@ Most importantly, you need to contact me to add your mailbox to the checklist, a
 
 ps:This file is particularly large.(256M)
 
+### Sign_google.py
+
+Adapted Environment: Windows
+
+```
+python Sign_google.py "yoursite"
+```
+
 ### Sign_google.yml
 
 Adapted Environment: Github Actions
