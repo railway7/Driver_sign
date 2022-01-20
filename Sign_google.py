@@ -5,6 +5,7 @@ if len(sys.argv) < 1:
     sys.exit()
 else:
     url = sys.argv[1]
+    print("Your site: {}".format(url))
 
 
 import random
@@ -78,6 +79,7 @@ def main(url):
         print(translator.trans("点击了:"))
         print(j)
         time.sleep(random.uniform(10, 30))
+    print("clicked {} times".format(len(list_urls)))
 
 def close_driver():
     global driver, contents
