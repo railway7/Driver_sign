@@ -69,7 +69,7 @@ def main(url):
     driver.get(url)
     time.sleep(3)
     driver.get(url)
-    time.sleep(60)
+    time.sleep(120)
     # WebDriverWait(driver, 30, 1).until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[3]/main/div/div/div/div[2]')))
     driver.switch_to.frame(driver.find_element(By.NAME, 'aswift_1'))
     eles = driver.find_elements(By.TAG_NAME, 'a')
@@ -108,10 +108,5 @@ if __name__ == '__main__':
         main(url)
         close_driver()
     except:
-        try:
-            print(2)
-            main(url)
-            close_driver()
-        except:
-            pass
+        pass
     print(translator.trans("结束脚本运行"))
