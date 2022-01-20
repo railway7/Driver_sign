@@ -93,7 +93,7 @@ def main(url):
     if len(list_site_urls) > 15:
         list_site_urls = list_site_urls[0:15]
     if len(list_urls) > len(list_site_urls):
-        for i in range(0, len(list_urls)):
+        for i in range(0, (len(list_urls) - len(list_site_urls))):
             list_site_urls.append(list_site_urls[i])
     list_urls.extend(list_site_urls)
     list_urls = random.sample(list_urls, len(list_urls))
