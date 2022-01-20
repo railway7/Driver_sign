@@ -83,7 +83,7 @@ def main(url):
         driver.get(j)
         print(translator.trans("点击了:"))
         print(j)
-        time.sleep(random.uniform(10, 30))
+        time.sleep(random.uniform(60, 120))
     print("clicked {} times".format(len(list_urls)))
 
 def close_driver():
