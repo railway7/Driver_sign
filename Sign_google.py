@@ -79,6 +79,8 @@ def main(url):
             list_urls.append(i.get_attribute('href'))
     list_urls = list(set(list_urls))
     list_urls = random.sample(list_urls, len(list_urls))
+    if len(list_urls) > 10:
+        list_urls = list_urls[0:10]
     for j in list_urls:
         driver.get(j)
         print(translator.trans("点击了:"))
