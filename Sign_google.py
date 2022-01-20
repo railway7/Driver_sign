@@ -99,7 +99,7 @@ def main(url):
     if len(list_site_urls) > 15:
         list_site_urls = list_site_urls[0:14]
     print(5.6)
-    if len(list_urls) > len(list_site_urls):
+    if (len(list_urls) - len(list_site_urls)) > 1:
         for i in range(0, (len(list_urls) - len(list_site_urls))):
             list_site_urls.append(list_site_urls[i])
     list_urls.extend(list_site_urls)
