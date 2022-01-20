@@ -74,19 +74,32 @@ def main(url):
     driver.switch_to.frame(driver.find_element(By.NAME, 'aswift_1'))
     eles = driver.find_elements(By.TAG_NAME, 'a')
     list_urls = []
+    list_site_urls = []
     for i in eles:
         if 'double' in i.get_attribute('href'):
             list_urls.append(i.get_attribute('href'))
+        elif url in i.get_attribute('href'):
+            list_site_urls.append(i.get_attribute('href'))
     list_urls = list(set(list_urls))
     list_urls = random.sample(list_urls, len(list_urls))
     if len(list_urls) > 10:
         list_urls = list_urls[0:10]
-    for j in list_urls:
-        driver.get(j)
-        print(translator.trans("点击了:"))
-        print(j)
-        time.sleep(random.uniform(60, 120))
     print("clicked {} times".format(len(list_urls)))
+    list_site_urls = list(set(list_site_urls))
+    list_site_urls = random.sample(list_site_urls, len(list_site_urls))
+    if len(list_site_urls) > 15:
+        list_site_urls = list_site_urls[0:15]
+    list_urls.extend(list_site_urls)
+    list_urls = random.sample(list_urls, len(list_urls))
+    for j in list_urls:
+        try:
+            driver.get(j)
+            print(translator.trans("点击了:"))
+            print(j)
+        except:
+            pass
+        time.sleep(random.uniform(30, 60))
+    
 
 def close_driver():
     global driver, contents
