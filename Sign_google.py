@@ -1,3 +1,6 @@
+#!/usr/bin/python 
+#-*-coding:utf-8-*- 
+
 # 作者仓库:https://github.com/spiritLHL/Gecko_sign
 # 觉得不错麻烦点个star谢谢
 # 活动页面 不可说，只能提供一个关键字ADS
