@@ -72,6 +72,7 @@ def main(url):
         if 'double' in i.get_attribute('href'):
             list_urls.append(i.get_attribute('href'))
     list_urls = list(set(list_urls))
+    list_urls = random.sample(list_urls, len(list_urls))
     for j in list_urls:
         driver.get(j)
         print(translator.trans("点击了:"))
