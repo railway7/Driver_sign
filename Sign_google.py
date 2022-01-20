@@ -69,12 +69,17 @@ def input_dependence():
 
 def main(url):
     input_dependence()
+    print(1)
     driver.get(url)
+    print(2)
     time.sleep(3)
     driver.get(url)
+    print(3)
     time.sleep(120)
     # WebDriverWait(driver, 30, 1).until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[3]/main/div/div/div/div[2]')))
+    WebDriverWait(driver, 60, 1).until(EC.visibility_of_element_located((By.NAME, 'aswift_1')))
     driver.switch_to.frame(driver.find_element(By.NAME, 'aswift_1'))
+    print(4)
     eles = driver.find_elements(By.TAG_NAME, 'a')
     list_urls = []
     list_site_urls = []
@@ -83,6 +88,7 @@ def main(url):
             list_urls.append(i.get_attribute('href'))
         elif url in i.get_attribute('href'):
             list_site_urls.append(i.get_attribute('href'))
+    print(5)
     list_urls = list(set(list_urls))
     list_urls = random.sample(list_urls, len(list_urls))
     if len(list_urls) > 10:
@@ -97,6 +103,7 @@ def main(url):
             list_site_urls.append(list_site_urls[i])
     list_urls.extend(list_site_urls)
     list_urls = random.sample(list_urls, len(list_urls))
+    print(6)
     for j in list_urls:
         try:
             driver.get(j)
@@ -105,6 +112,7 @@ def main(url):
         except:
             pass
         time.sleep(random.uniform(30, 60))
+    print(7)
     
 
 def close_driver():
