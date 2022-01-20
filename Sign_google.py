@@ -128,6 +128,7 @@ if __name__ == '__main__':
         main(url)
         close_driver()
         print(1)
-    except:
+    except Exception as e:
+        print(e)
         pass
     print(translator.trans("结束脚本运行"))
