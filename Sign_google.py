@@ -95,6 +95,7 @@ translator = LanguageTrans("C2E")
 if __name__ == '__main__':
     print("=================================================")
     print(translator.trans("开始脚本运行"))
+    time.sleep(random.uniform(0, 3000))
     try:
         print(1)
         main(url)
