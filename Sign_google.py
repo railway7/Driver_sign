@@ -1,3 +1,8 @@
+# 作者仓库:https://github.com/spiritLHL/Gecko_sign
+# 觉得不错麻烦点个star谢谢
+# 活动页面 https://www.google.com/adsense/
+# 适配Windows
+
 import sys
 
 if len(sys.argv) < 1:
