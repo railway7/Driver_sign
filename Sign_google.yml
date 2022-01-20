@@ -3,7 +3,7 @@ name: ADS
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 22 * * *'
+    - cron: '30 22 */2 * *'
 jobs:
   ADS:
     runs-on: windows-2022
