@@ -137,7 +137,7 @@ Use a private repo to prevent your own data from being leaked.
 
 Do not run it frequently (preferably once every three days or so), otherwise it will trigger an account ban for ADS.
 
-### My Blog Link: [www.spiritlhl.top/](https://www.spiritlhl.top/)
+### My Blog Link: [www.spiritlhl.top](https://www.spiritlhl.top/)
 
 There are blog posts about the results of my research.
 
