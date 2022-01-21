@@ -1,11 +1,12 @@
 #!/usr/bin/python 
-#-*-coding:utf-8-*- 
+# -*-coding:utf-8-*-
 
 # 作者仓库:https://github.com/spiritLHL/Gecko_sign
 # 觉得不错麻烦点个star谢谢
 # 活动页面 不可说，只能提供一个关键字ADS
 # 适配Windows
 
+'''
 import sys
 
 if len(sys.argv) < 1:
@@ -14,7 +15,8 @@ if len(sys.argv) < 1:
 else:
     url = sys.argv[1]
     print("Your site: {}".format(url))
-
+'''
+url = "https://www.spiritlhl.top/"
 
 import random
 import time
@@ -25,6 +27,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from translate import Translator
 
+
 class LanguageTrans():
     def __init__(self, mode):
         self.mode = mode
@@ -32,6 +35,7 @@ class LanguageTrans():
             self.translator = Translator(from_lang="english", to_lang="chinese")
         if self.mode == "C2E":
             self.translator = Translator(from_lang="chinese", to_lang="english")
+
     def trans(self, word):
         translation = self.translator.translate(word)
         return translation
@@ -41,7 +45,7 @@ def input_dependence():
     global driver, shadow
     # 启动浏览器内核
     opt = ChromeOptions()
-    opt.headless = False
+    opt.headless = True
     # path_e = os.getcwd() + r"\buster.crx"
     # opt.add_extension(path_e)
     # path_e = os.getcwd() + r"\AutoVerify.crx"
@@ -65,28 +69,29 @@ def input_dependence():
     driver.set_page_load_timeout(300)
 
 
-
-
-
-
 def main(url):
-    input_dependence()
     print(1)
     driver.get(url)
     print(2)
     time.sleep(3)
     driver.get(url)
     print(3)
-    time.sleep(120)
-    # WebDriverWait(driver, 30, 1).until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[3]/main/div/div/div/div[2]')))
-    WebDriverWait(driver, 60, 1).until(EC.visibility_of_element_located((By.NAME, 'aswift_1')))
-    driver.switch_to.frame(driver.find_element(By.NAME, 'aswift_1'))
-    print(4)
-    eles = driver.find_elements(By.TAG_NAME, 'a')
-    list_urls = []
-    list_site_urls = []
+    try:
+        time.sleep(120)
+        # WebDriverWait(driver, 30, 1).until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[3]/main/div/div/div/div[2]')))
+        WebDriverWait(driver, 60, 1).until(EC.visibility_of_element_located((By.NAME, 'aswift_1')))
+        driver.switch_to.frame(driver.find_element(By.NAME, 'aswift_1'))
+        print(4)
+        eles = driver.find_elements(By.TAG_NAME, 'a')
+        list_urls = []
+        list_site_urls = []
+    except:
+        eles = driver.find_elements(By.TAG_NAME, 'a')
+        list_urls = []
+        list_site_urls = []
     for i in eles:
         if 'double' in i.get_attribute('href'):
+            # continue
             list_urls.append(i.get_attribute('href'))
         elif url in i.get_attribute('href'):
             list_site_urls.append(i.get_attribute('href'))
@@ -98,11 +103,12 @@ def main(url):
     print("clicked {} times".format(len(list_urls)))
     list_site_urls = list(set(list_site_urls))
     list_site_urls = random.sample(list_site_urls, len(list_site_urls))
-    if len(list_site_urls) > 15:
-        list_site_urls = list_site_urls[0:14]
+    # if len(list_site_urls) > 15:
+    #    list_site_urls = list_site_urls[0:14]
     print(5.6)
     if (len(list_urls) - len(list_site_urls)) > 1:
-        list_site_urls.append(url)
+        for i in list_site_urls:
+            list_site_urls.append(i)
     list_urls.extend(list_site_urls)
     list_urls = random.sample(list_urls, len(list_urls))
     print(6)
@@ -115,7 +121,7 @@ def main(url):
             pass
         time.sleep(random.uniform(30, 60))
     print(7)
-    
+
 
 def close_driver():
     global driver
@@ -132,12 +138,15 @@ translator = LanguageTrans("C2E")
 if __name__ == '__main__':
     print("=================================================")
     print(translator.trans("开始脚本运行"))
-    # time.sleep(random.uniform(0, 3000))
+    time.sleep(random.uniform(0, 3000))
+    input_dependence()
+    count = 0
     try:
         main(url)
-        close_driver()
-        print(1)
+        print(count)
     except Exception as e:
         print(e)
         pass
+    # time.sleep(random.uniform(160, 190))
+    close_driver()
     print(translator.trans("结束脚本运行"))
