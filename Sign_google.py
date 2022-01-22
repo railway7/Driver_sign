@@ -6,7 +6,7 @@
 # 活动页面 不可说，只能提供一个关键字ADS
 # 适配Windows
 
-'''
+
 import sys
 
 if len(sys.argv) < 1:
@@ -15,8 +15,7 @@ if len(sys.argv) < 1:
 else:
     url = sys.argv[1]
     print("Your site: {}".format(url))
-'''
-url = "https://www.spiritlhl.top/"
+
 
 import random
 import time
