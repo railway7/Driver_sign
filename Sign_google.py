@@ -90,7 +90,7 @@ def main(url):
         list_urls = []
         list_site_urls = []
     for i in eles:
-        if 'double' in i.get_attribute('href'):
+        if 'double' in i.get_attribute('href') or 'googleadservices' in i.get_attribute('href'):
             # continue
             list_urls.append(i.get_attribute('href'))
         elif url in i.get_attribute('href'):
