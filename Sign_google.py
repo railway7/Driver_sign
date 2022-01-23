@@ -147,7 +147,7 @@ translator = LanguageTrans("C2E")
 if __name__ == '__main__':
     print("=================================================")
     print(translator.trans("开始脚本运行"))
-    time.sleep(random.uniform(0, 3000))
+    time.sleep(random.uniform(random.uniform(0, 1000), 2000))
     input_dependence()
     count = 0
     try:
