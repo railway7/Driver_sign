@@ -94,7 +94,8 @@ def main(url):
         driver.switch_to.default_content()
         eles = driver.find_elements(By.TAG_NAME, 'a')
         for i in eles:
-            list_urls.append(i.get_attribute('href'))
+            if 'google' not in i.get_attribute('href'):
+                list_urls.append(i.get_attribute('href'))
     for i in eles:
         if 'googleadservices' in i.get_attribute('href') and status_r >= 9: #'double' in i.get_attribute('href') or 
             # continue
