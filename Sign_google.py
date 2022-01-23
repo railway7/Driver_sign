@@ -77,7 +77,6 @@ def main(url):
     print(3)
     try:
         time.sleep(120)
-        # WebDriverWait(driver, 30, 1).until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[3]/main/div/div/div/div[2]')))
         WebDriverWait(driver, 60, 1).until(EC.visibility_of_element_located((By.NAME, 'aswift_1')))
         driver.switch_to.frame(driver.find_element(By.NAME, 'aswift_1'))
         print(4)
@@ -89,7 +88,7 @@ def main(url):
         list_urls = []
         list_site_urls = []
     status_r = random.uniform(0,10)
-    if status_r >= 9:
+    if status_r <= 8:
         # 回到初始页面，进行下一步操作
         driver.switch_to.default_content()
         eles = driver.find_elements(By.TAG_NAME, 'a')
@@ -97,7 +96,7 @@ def main(url):
             if 'google' not in i.get_attribute('href'):
                 list_urls.append(i.get_attribute('href'))
     for i in eles:
-        if 'googleadservices' in i.get_attribute('href') and status_r >= 9: #'double' in i.get_attribute('href') or 
+        if 'googleadservices' in i.get_attribute('href') and status_r >= 8: #'double' in i.get_attribute('href') or
             # continue
             list_urls.append(i.get_attribute('href'))
         elif url in i.get_attribute('href') and 'google' not in i.get_attribute('href'):
@@ -110,8 +109,6 @@ def main(url):
     print("clicked {} times".format(len(list_urls)))
     list_site_urls = list(set(list_site_urls))
     list_site_urls = random.sample(list_site_urls, len(list_site_urls))
-    # if len(list_site_urls) > 15:
-    #    list_site_urls = list_site_urls[0:14]
     print(5.6)
     if (len(list_urls) - len(list_site_urls)) > 1:
         for i in list_site_urls:
@@ -122,7 +119,7 @@ def main(url):
     for j in list_urls:
         try:
             driver.get(j)
-            print(translator.trans("点击了:"))
+            print("点击了:")
             print(j)
         except:
             pass
