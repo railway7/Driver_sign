@@ -24,21 +24,6 @@ from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.common.exceptions import TimeoutException
-from translate import Translator
-
-
-class LanguageTrans():
-    def __init__(self, mode):
-        self.mode = mode
-        if self.mode == "E2C":
-            self.translator = Translator(from_lang="english", to_lang="chinese")
-        if self.mode == "C2E":
-            self.translator = Translator(from_lang="chinese", to_lang="english")
-
-    def trans(self, word):
-        translation = self.translator.translate(word)
-        return translation
 
 
 def input_dependence():
@@ -102,7 +87,7 @@ def main(url):
     for j in list_urls:
         try:
             driver.get(j)
-            print(translator.trans("点击了:"))
+            print("点击了:")
             print(j)
         except:
             pass
@@ -120,13 +105,13 @@ def close_driver():
     except Exception as e:
         print(e)
         print("driver closed")
-    print(translator.trans("关闭浏览器内核完毕"))
+    print("关闭浏览器内核完毕")
 
 
-translator = LanguageTrans("C2E")
+
 if __name__ == '__main__':
     print("=================================================")
-    print(translator.trans("开始脚本运行"))
+    print("开始脚本运行")
     time.sleep(random.uniform(random.uniform(0, 500), 1000))
     input_dependence()
     count = 0
@@ -137,4 +122,4 @@ if __name__ == '__main__':
         print(e)
         pass
     close_driver()
-    print(translator.trans("结束脚本运行"))
+    print("结束脚本运行")
