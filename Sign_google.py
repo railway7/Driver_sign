@@ -99,7 +99,7 @@ def main(url):
         if 'googleadservices' in i.get_attribute('href') and status_r >= 9: #'double' in i.get_attribute('href') or 
             # continue
             list_urls.append(i.get_attribute('href'))
-        elif url in i.get_attribute('href'):
+        elif url in i.get_attribute('href') and 'google' not in i.get_attribute('href'):
             list_site_urls.append(i.get_attribute('href'))
     print(5)
     list_urls = list(set(list_urls))
