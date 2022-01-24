@@ -131,10 +131,11 @@ def main(url):
     for j in list_urls:
         try:
             driver.get(j)
-            print("点击了:")
+            print("clicked:")
             print(j)
         except Exception as e:
-                print(e)
+            print(e)
+            continue
         time.sleep(random.uniform(30, 60))
         driver.execute_script('window.scrollTo(0,document.body.scrollHeight)')
         time.sleep(random.uniform(30, 60))
