@@ -53,7 +53,8 @@ def input_dependence():
     # opt.add_experimental_option('prefs', prefs)  # 关掉浏览器左上角的通知提示
     # opt.add_argument("disable-infobars")  # 关闭'chrome正受到自动测试软件的控制'提示
     opt.add_argument('--no-sandbox')
-    # 设置开发者模式启动，该模式下webdriver属性为正常值
+    opt.add_argument("--disable-blink-features")
+    opt.add_argument("--disable-blink-features=AutomationControlled")
     opt.add_experimental_option('excludeSwitches', ['enable-automation'])
     opt.add_argument('--disable-gpu')
     opt.add_argument('--disable-dev-shm-usage')
@@ -63,6 +64,8 @@ def input_dependence():
     opt.add_experimental_option('excludeSwitches', ['enable-logging'])
     ser = Service("chromedriver")
     driver = Chrome(service=ser, options=opt)
+    driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+    "source": "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
     # 加载影子模块
     # shadow = Shadow(driver)
     driver.set_page_load_timeout(300)
@@ -170,7 +173,7 @@ translator = LanguageTrans("C2E")
 if __name__ == '__main__':
     print("=================================================")
     print(translator.trans("开始脚本运行"))
-    time.sleep(random.uniform(random.uniform(0, 500), 1000))
+    # time.sleep(random.uniform(random.uniform(0, 500), 1000))
     input_dependence()
     count = 0
     try:
