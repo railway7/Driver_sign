@@ -16,7 +16,6 @@ else:
     url = sys.argv[1]
     print("Your site: {}".format(url))
 
-
 import random
 import time
 from selenium.webdriver import ChromeOptions, Chrome
@@ -55,17 +54,17 @@ def input_dependence():
     opt.add_argument('--no-sandbox')
     opt.add_argument("--disable-blink-features")
     opt.add_argument("--disable-blink-features=AutomationControlled")
-    opt.add_experimental_option('excludeSwitches', ['enable-automation'])
+    opt.add_argument('excludeSwitches', ['enable-automation'])
     opt.add_argument('--disable-gpu')
     opt.add_argument('--disable-dev-shm-usage')
     # opt.add_argument({"extensions.ui.developer_mode": True})
     # opt.add_experimental_option('useAutomationExtension', False)
     # opt.set_preference("extensions.firebug.allPagesActivation", "on")
-    opt.add_experimental_option('excludeSwitches', ['enable-logging'])
+    opt.add_argument('excludeSwitches', ['enable-logging'])
     ser = Service("chromedriver")
     driver = Chrome(service=ser, options=opt)
     driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
-    "source": "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
+    "source": "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"})
     # 加载影子模块
     # shadow = Shadow(driver)
     driver.set_page_load_timeout(300)
