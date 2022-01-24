@@ -100,7 +100,7 @@ def main(url):
             list_urls.append(i.get_attribute('href'))
         elif url in i.get_attribute('href') and 'google' not in i.get_attribute('href'):
             list_site_urls.append(i.get_attribute('href'))
-    print(list_urls)
+    # print(list_urls)
     print(5)
     list_urls = list(set(list_urls))
     list_urls = random.sample(list_urls, len(list_urls))
