@@ -97,7 +97,7 @@ def main(url):
         list_urls = []
         list_site_urls = []
     status_r = random.uniform(0,10)
-    if status_r <= 7:
+    if status_r <= 5:
         # 回到初始页面，进行下一步操作
         driver.switch_to.default_content()
         eles = driver.find_elements(By.TAG_NAME, 'a')
@@ -105,7 +105,7 @@ def main(url):
             if 'google' not in i.get_attribute('href'):
                 list_urls.append(i.get_attribute('href'))
     for i in eles:
-        if 'googleadservices' in i.get_attribute('href') and status_r >= 7: #'double' in i.get_attribute('href') or
+        if 'googleadservices' in i.get_attribute('href') and status_r >= 5: #'double' in i.get_attribute('href') or
             # continue
             list_urls.append(i.get_attribute('href'))
         elif url in i.get_attribute('href') and 'google' not in i.get_attribute('href'):
