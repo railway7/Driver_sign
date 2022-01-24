@@ -24,20 +24,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from translate import Translator
+# from translate import Translator
 
-
-class LanguageTrans():
-    def __init__(self, mode):
-        self.mode = mode
-        if self.mode == "E2C":
-            self.translator = Translator(from_lang="english", to_lang="chinese")
-        if self.mode == "C2E":
-            self.translator = Translator(from_lang="chinese", to_lang="english")
-
-    def trans(self, word):
-        translation = self.translator.translate(word)
-        return translation
 
 
 def input_dependence():
@@ -169,14 +157,13 @@ def close_driver():
     except Exception as e:
         print(e)
         print("driver closed")
-    print(translator.trans("关闭浏览器内核完毕"))
+    print("closed")
 
 
-translator = LanguageTrans("C2E")
 if __name__ == '__main__':
     print("=================================================")
-    print(translator.trans("开始脚本运行"))
-    time.sleep(random.uniform(random.uniform(0, 300), 1000))
+    print("start")
+    time.sleep(random.uniform(random.uniform(0, 500), 1000))
     input_dependence()
     count = 0
     try:
@@ -187,4 +174,4 @@ if __name__ == '__main__':
         pass
     # time.sleep(random.uniform(160, 190))
     close_driver()
-    print(translator.trans("结束脚本运行"))
+    print("closed end")
