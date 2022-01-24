@@ -1,4 +1,4 @@
-#!/usr/bin/python 
+#!/usr/bin/python
 # -*-coding:utf-8-*-
 
 # 作者仓库:https://github.com/spiritLHL/Gecko_sign
@@ -139,22 +139,25 @@ def main(url):
         time.sleep(random.uniform(30, 60))
         driver.execute_script('window.scrollTo(0,document.body.scrollHeight)')
         time.sleep(random.uniform(30, 60))
-        tp_url = driver.current_url
-        eles = driver.find_elements(By.TAG_NAME, 'a')
-        tp = []
-        for k in eles:
-            if tp_url in k:
-                tp.append(k)
-        if tp == []:
-            tp.append(tp_url)
-        elif len(tp) > 5:
-            tp = tp[0:6]
-        for l in tp:
-            try:
-                driver.get(l)
-                time.sleep(random.uniform(30, 60))
-            except Exception as e:
-                print(e)
+        try:
+            tp_url = driver.current_url
+            cles = driver.find_elements(By.TAG_NAME, 'a')
+            tp = []
+            for k in cles:
+                if tp_url in k:
+                    tp.append(k)
+            if tp == []:
+                tp.append(tp_url)
+            elif len(tp) > 5:
+                tp = tp[0:6]
+            for l in tp:
+                try:
+                    driver.get(l)
+                    time.sleep(random.uniform(30, 60))
+                except Exception as e:
+                    print(e)
+        except:
+            pass
     print(7)
 
 
@@ -173,7 +176,7 @@ translator = LanguageTrans("C2E")
 if __name__ == '__main__':
     print("=================================================")
     print(translator.trans("开始脚本运行"))
-    time.sleep(random.uniform(random.uniform(0, 500), 1000))
+    time.sleep(random.uniform(random.uniform(0, 300), 1000))
     input_dependence()
     count = 0
     try:
