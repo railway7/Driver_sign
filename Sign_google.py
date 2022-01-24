@@ -147,6 +147,17 @@ def main(url):
         except:
             pass
     print(7)
+    try:
+        driver.get(url)
+        WebDriverWait(driver, 60, 1).until(EC.visibility_of_element_located((By.NAME, 'aswift_1')))
+    except Exception as e:
+        print(e)
+        try:
+            driver.get(url)
+            WebDriverWait(driver, 60, 1).until(EC.visibility_of_element_located((By.NAME, 'aswift_1')))
+        except Exception as e:
+            print(e)
+            driver.get(url)
 
 
 def close_driver():
