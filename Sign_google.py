@@ -74,11 +74,13 @@ def main(url):
     print(2)
     try:
         WebDriverWait(driver, 60, 1).until(EC.visibility_of_element_located((By.NAME, 'aswift_1')))
-    except:
+    except Exception as e:
+        print(e)
         try:
             driver.get(url)
             WebDriverWait(driver, 60, 1).until(EC.visibility_of_element_located((By.NAME, 'aswift_1')))
-        except:
+        except Exception as e:
+            print(e)
             driver.get(url)
     print(3)
     try:
@@ -89,7 +91,8 @@ def main(url):
         eles = driver.find_elements(By.TAG_NAME, 'a')
         list_urls = []
         list_site_urls = []
-    except:
+    except Exception as e:
+        print(e)
         eles = driver.find_elements(By.TAG_NAME, 'a')
         list_urls = []
         list_site_urls = []
@@ -127,11 +130,27 @@ def main(url):
             driver.get(j)
             print("点击了:")
             print(j)
-        except:
-            pass
+        except Exception as e:
+                print(e)
         time.sleep(random.uniform(30, 60))
         driver.execute_script('window.scrollTo(0,document.body.scrollHeight)')
         time.sleep(random.uniform(30, 60))
+        tp_url = driver.current_url
+        eles = driver.find_elements(By.TAG_NAME, 'a')
+        tp = []
+        for k in eles:
+            if tp_url in k:
+                tp.append(k)
+        if tp == []:
+            tp.append(tp_url)
+        elif len(tp) > 5:
+            tp = tp[0:6]
+        for l in tp:
+            try:
+                driver.get(l)
+                time.sleep(random.uniform(30, 60))
+            except Exception as e:
+                print(e)
     print(7)
 
 
