@@ -22,7 +22,7 @@ passwords = ["xxxxxxxxxxxx", "xxxxxxx"]
 
 Adapted Environment: Windows
 
-Wait for the plugin author to update, otherwise the verification code will not be recognized and passed.(2022.1.19)
+Wait for the plugin author's server to update, otherwise the verification code will not be recognized and passed.(2022.1.19)
 
 ```
 users = ["xxxxxx@163.com", "xxxxxxxx@qq.com"]
@@ -39,7 +39,7 @@ Please create your own workflow by mimicking [Sign_sojiang.yml](https://github.c
 
 Use a private repo to prevent your own data from being leaked.
 
-Wait for the plugin author to update, otherwise the verification code will not be recognized and passed.(2022.1.19)
+Wait for the plugin author's server to update, otherwise the verification code will not be recognized and passed.(2022.1.19)
 
 ![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/QQ%E5%9B%BE%E7%89%8720220110164439.png)
 
