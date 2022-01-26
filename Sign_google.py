@@ -132,12 +132,13 @@ def main(url):
             cles = driver.find_elements(By.TAG_NAME, 'a')
             tp = []
             for k in cles:
-                if tp_url in k:
-                    tp.append(k)
+                if tp_url in k.get_attribute('href') and 'http' in k.get_attribute('href') and 'google' not in k.get_attribute('href'):
+                    tp.append(k.get_attribute('href'))
             if tp == []:
                 tp.append(tp_url)
-            elif len(tp) > 5:
-                tp = tp[0:6]
+            elif len(tp) > 2:
+                tp = tp[0:2]
+            print(tp)
             for l in tp:
                 try:
                     driver.get(l)
