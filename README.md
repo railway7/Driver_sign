@@ -51,6 +51,8 @@ You need to enable the Tencent Cloud speech recognition function in advance.
 
 https://console.cloud.tencent.com/asr
 
+https://console.cloud.tencent.com/ocr/
+
 Then set a Tencent Cloud access key.
 
 https://console.cloud.tencent.com/cam/capi
@@ -81,6 +83,8 @@ You need to enable the Tencent Cloud speech recognition function in advance.
 
 https://console.cloud.tencent.com/asr
 
+https://console.cloud.tencent.com/ocr/
+
 Then set a Tencent Cloud access key.
 
 https://console.cloud.tencent.com/cam/capi
@@ -95,13 +99,15 @@ Most importantly, you need to contact me to add your mailbox to the checklist, a
 
 ![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/xah.png)
 
-### Sign_xah_linux
+### Sign_xah_linux(Abandoned, too lazy to pack new ones)
 
 Adapted Environment: Linux
 
 You need to enable the Tencent Cloud speech recognition function in advance.
 
 https://console.cloud.tencent.com/asr
+
+https://console.cloud.tencent.com/ocr/
 
 Then set a Tencent Cloud access key.
 
