@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: 'Sign_xah' 
         run: |
-          cmd /c curl -s -O https://raw.githubusercontent.com/spiritLHL/Gecko_sign/master/chromedriver.exe
-          cmd /c curl -s -O https://raw.githubusercontent.com/spiritLHL/Gecko_sign/master/Sign_xah.exe
+          cmd /c curl -s -O https://raw.githubusercontent.com/spiritLHL/Driver_sign/master/chromedriver.exe
+          cmd /c curl -s -O https://raw.githubusercontent.com/spiritLHL/Driver_sign/master/Sign_xah.exe
           #cmd /c Sign_xah.exe "账号1 账号2 账号3" "密码1 密码2 密码3" "腾讯云访问密钥secretID" "腾讯云访问密钥secretkey" "邮箱"
           # 推荐使用下方单账号单邮箱每个Action，同一Action多账户容易触发异常
           cmd /c Sign_xah.exe "账号1" "密码1" "腾讯云访问密钥secretID" "腾讯云访问密钥secretkey" "邮箱"
