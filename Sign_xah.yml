@@ -6,7 +6,7 @@ on:
     - cron: '13 19 */2 * *'
 jobs:
   XAH:
-    runs-on: windows-2022
+    runs-on: windows-20220207.1
     
     steps:
       - name: 'Sign_xah' 
