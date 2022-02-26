@@ -43,32 +43,6 @@ Wait for the plugin author's server to update, otherwise the verification code w
 
 ![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/QQ%E5%9B%BE%E7%89%8720220110164439.png)
 
-### Sign_xah.exe
-
-Adapted Environment: Windows
-
-You need to enable the Tencent Cloud speech recognition function in advance.
-
-https://console.cloud.tencent.com/asr
-
-https://console.cloud.tencent.com/ocr/
-
-Then set a Tencent Cloud access key.
-
-https://console.cloud.tencent.com/cam/capi
-
-Please download the Google Chrome driver corresponding to your local Google Chrome.
-
-https://blog.csdn.net/zhoukeguai/article/details/113247342
-
-It is recommended to use a single account and a single email. Using multiple accounts can easily trigger exceptions.
-
-Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every 2 days.
-
-```
-Sign_xah.exe "tgid" "password" "Tencent cloud access key secret ID" "Tencent cloud access key secret key" "email"
-```
-
 ### Sign_xah.yml
 
 Adapted Environment: Github Actions
