@@ -31,20 +31,6 @@ users = ["xxxxxx@163.com", "xxxxxxxx@qq.com"]
 passwords = ["xxxxxxxxxxxx", "xxxxxxx"]
 ```
 
-### Sign_sojiang.yml
-
-Adapted Environment: Github Actions
-
-[Tutorial link](https://lo-victoria.com/github-actions-101-creating-your-first-workflow#Create%20your%20First%20Workflow)
-
-Please create your own workflow by mimicking [Sign_sojiang.yml](https://github.com/spiritLHL/Driver_sign/blob/master/Sign_sojiang.yml) file.
-
-Use a private repo to prevent your own data from being leaked.
-
-Wait for the plugin author's server to update, otherwise the verification code will not be recognized and passed.(2022.1.19)
-
-![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/QQ%E5%9B%BE%E7%89%8720220110164439.png)
-
 ### My Blog Link: [www.spiritlhl.top](https://www.spiritlhl.top/)
 
 There are blog posts about the results of my research.
