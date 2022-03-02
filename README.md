@@ -73,34 +73,6 @@ It is recommended to use a single account and a single email for each Action. Us
 
 Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every 2 days.
 
-![](https://cdn.jsdelivr.net/gh/spiritLHL/tuchuang@master/xah.png)
-
-### Sign_xah_linux(Abandoned, too lazy to pack new ones)
-
-Adapted Environment: Linux
-
-You need to enable the Tencent Cloud speech recognition function in advance.
-
-https://console.cloud.tencent.com/asr
-
-https://console.cloud.tencent.com/ocr/
-
-Then set a Tencent Cloud access key.
-
-https://console.cloud.tencent.com/cam/capi
-
-You need to install google chrome locally on Linux.
-
-Then you need to put the corresponding google chrome version of chromedriver under the same folder of the script.
-
-It is recommended to use a single account and a single email. Using multiple accounts can easily trigger exceptions.
-
-Most importantly, you need to contact me to add your mailbox to the checklist, and the check-in cycle is every 2 days.
-
-**Download link:[https://disk.yandex.com/d/bAenxdt-7wa92A](https://disk.yandex.com/d/bAenxdt-7wa92A)**
-
-ps:This file is particularly large.(256M)
-
 ### My Blog Link: [www.spiritlhl.top](https://www.spiritlhl.top/)
 
 There are blog posts about the results of my research.
